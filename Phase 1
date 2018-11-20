@@ -19,16 +19,21 @@ Introduction:
 
 Responsibility Sheet:
 Jake:
-  -Get code from previously built game.
-  -Strip code and implement rooms into the code
+  - Get code from previously built game.
+  - Strip code and implement rooms into the code
+  - Code Commands for the game
 
 Sam:
-  -Write Stroy Board for game being built.
-  -Room Creation - 13 Rooms
+  - Write Stroy Board for game being built.
+  - Room Creation - 13 Rooms
+  - Coding the items into the game
+  - Changing player inventory to linked list bag.
 
 Brain:
   - Create Project design
   - Create Uml Document
+  - Coding the Rooms into the game
+  - Code the three Exceptions.
 
 Explanation Sheet:
 

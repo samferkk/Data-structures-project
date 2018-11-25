@@ -74,14 +74,6 @@ public class Game {
                 goBack();
                 break;
 
-                case DROP:
-                drop(command);
-                break;
-
-                case EXAMINE:
-                examine(command);
-                break;
-
                 case GO:
                 goRoom(command);
                 break;
@@ -94,40 +86,12 @@ public class Game {
                 inventory();
                 break;
 
-                case LOCK:
-                lock(command);
-                break;
-
                 case LOOK:
                 look();
                 break;
 
-                case PACK:
-                pack(command);
-                break;
-
-                case SCORE:
-                getScore();
-                break;
-
-                case STATUS:
-                getStatus();
-                break;
-
                 case TAKE:
                 take(command);
-                break;
-
-                case TURNS:
-                getTurns();
-                break;
-
-                case UNLOCK:
-                unlock(command);
-                break;
-
-                case UNPACK:
-                unpack(command);
                 break;
 
                 case QUIT:

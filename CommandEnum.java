@@ -11,13 +11,17 @@ public enum CommandEnum {
      */
     BACK("back"),
     /**
-     * Drop command.
+     * Buy command.
      */
-    DROP("drop"),
+    BUY("buy"),
     /**
-     * Examine comand.
+     * Cross off command.
      */
-    EXAMINE("examine"),
+    CROSS("cross"),
+    /**
+     * Read command.
+     */
+    READ("read"),
     /**
      * Go command.
      */
@@ -31,41 +35,17 @@ public enum CommandEnum {
      */
     INVENTORY("inventory"),
     /**
-     * Lock command.
+     * Leave command
      */
-    LOCK("lock"),
+    LEAVE("leave"),
     /**
      * Look command.
      */
     LOOK("look"),
     /**
-     * Pack command.
-     */
-    PACK("pack"),
-    /**
-     * Status command.
-     */
-    STATUS("status"),
-    /**
-     * The Score command.
-     */
-    SCORE("score"),
-    /**
      * Take command.
      */
     TAKE("take"),
-    /**
-     * The Turns command.
-     */
-    TURNS("turns"),
-    /**
-     * Unlock command.
-     */
-    UNLOCK("unlock"),
-    /**
-     * Unpack command.
-     */
-    UNPACK("unpack"),
     /**
      * Quit command.
      */

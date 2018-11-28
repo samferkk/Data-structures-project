@@ -108,16 +108,41 @@ public class World {
         // Turorial Level
        //this.createDoor(room001,"north",room002);
        //this.createDoor(room002,"south",room001);
-       this.createDoor(,"",);
-       this.createDoor(,"",);
-        this.createDoor(,"",);
-        this.createDoor(,"",);
-        this.createDoor(,"",);
-        this.createDoor(,"",);
-        this.createDoor(,"",);
-        this.createDoor(,"",);
-        this.createDoor(,"",);
-        this.createDoor(,"",);
+       this.createDoor(hardwareSupplies,"east",westWing);
+       this.createDoor(westWing,"west",hardwareSupplies);
+        
+        this.createDoor(westWing,"south",womensRoom);
+        this.createDoor(womensRoom,"north",westWing);
+        
+        this.createDoor(westWing,"north",furniture);
+        this.createDoor(furniture,"south",westWing);
+        
+        this.createDoor(lobby,"west",westWing);
+        this.createDoor(westWing,"east",lobby);
+        
+        this.createDoor(lobby,"northwest",candyStore);
+        this.createDoor(candyStore,"southeast",lobby);
+        
+        this.createDoor(lobby,"southwest",clothingStore);
+        this.createDoor(clothingStore,"northeast",lobby);
+        
+        this.createDoor(lobby,"southeast",sweatShop);
+        this.createDoor(sweatShop,"northwest",lobby);
+        
+        this.createDoor(lobby,"northeast",bookStore);
+        this.createDoor(bookStore,"southwest",lobby);
+        
+        this.createDoor(lobby,"east",eastWing);
+        this.createDoor(eastWing,"west",lobby);
+        
+        this.createDoor(eastWing,"south",mensRoom);
+        this.createDoor(mensRoom,"north",eastWing);
+        
+        this.createDoor(eastWing,"north",sportsShop);
+        this.createDoor(sportsShop,"south",eastWing);
+        
+        this.createDoor(eastWing,"east",toyStore);
+        this.createDoor(toyStore,"west",eastWing);
        
        
        // One direction exits.

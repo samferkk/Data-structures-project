@@ -73,6 +73,18 @@ public class Game {
                 case BACK:
                 goBack();
                 break;
+                
+                case BUY:
+                //buy(command);
+                break;
+                
+                case CROSS:
+                //croos(command);
+                break;
+                
+                case READ:
+                //read(command);
+                break;
 
                 case GO:
                 goRoom(command);
@@ -84,6 +96,10 @@ public class Game {
 
                 case INVENTORY:
                 inventory();
+                break;
+                
+                case LEAVE:
+                //leave();
                 break;
 
                 case LOOK:

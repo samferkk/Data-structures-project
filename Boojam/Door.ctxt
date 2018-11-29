@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Door
+comment0.text=\n\ Class\ Door\ -\ a\ door\ or\ portal\ between\ two\ Rooms\ in\ an\ adventure\ game.\n\ \n\ This\ class\ is\ part\ of\ the\ "Campus\ of\ Kings"\ application.\ "Campus\ of\ Kings"\ is\ a\n\ very\ simple,\ text\ based\ adventure\ game.\n\ \n\ A\ "Door"\ represents\ a\ door\ or\ portal\ between\ two\ locations\ of\ the\ game.\n\ It\ stores\ a\ reference\ to\ the\ neighboring\ room\ and\ whether\ that\ door\n\ or\ portal\ is\ locked.\ \ Doors\ are\ not\ locked\ by\ default.\n\ \n\ @author\ Maria\ Jump\n\ @version\ 2015.02.01\n
+comment1.params=destination
+comment1.target=Door(Room)
+comment1.text=\n\ Constructor\ for\ the\ Door\ class.\n\ @param\ destination\ The\ room\ this\ door\ leads\ to\n
+comment2.params=
+comment2.target=Room\ getDestination()
+comment2.text=\n\ A\ getter\ for\ the\ room\ this\ door\ leads\ to.\n\ @return\ The\ room\ this\ door\ leads\ to\n
+comment3.params=
+comment3.target=boolean\ isLocked()
+comment3.text=\n\ A\ getter\ for\ whether\ this\ door\ is\ locked.\n\ @return\ Whether\ this\ door\ is\ locked\n
+comment4.params=locked
+comment4.target=void\ setLocked(boolean)
+comment4.text=\n\ A\ setter\ for\ whether\ this\ door\ is\ locked.\n\ @param\ locked\ Whether\ this\ door\ is\ locked.\n
+comment5.params=
+comment5.target=java.lang.String\ getKey()
+comment5.text=\n\ This\ method\ is\ for\ getting\ the\ key\ for\ a\ door.\n\ @return\ a\ string\ of\ the\ name\ of\ the\ key\ required\ to\ unlock\ the\ door.\n
+comment6.params=keyJawn
+comment6.target=void\ setKey(java.lang.String)
+comment6.text=\n\ This\ method\ is\ used\ to\ set\ the\ key\ the\ will\ be\ need\ for\ unlocking\ the\ door.\n\ @param\ keyJawn\ is\ the\ key\ that\ will\ be\ used\ to\ open\ the\ door.\n
+numComments=7

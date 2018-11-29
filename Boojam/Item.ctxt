@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Item
+comment0.text=\n\ This\ calss\ will\ be\ used\ for\ defineing\ items.\n\n\ @author\ William\ Jacob\ Reilley\n\ @version\ 2018.04.22\n
+comment1.params=nameJawn\ descriptionJawn
+comment1.target=Item(java.lang.String,\ java.lang.String)
+comment1.text=\n\ This\ is\ the\ Constructor\ for\ an\ item.\n\ \n\ @param\ nameJawn\ is\ the\ name\ of\ the\ item.\n\ @param\ descriptionJawn\ is\ the\ description\ of\ the\ item.\n
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment2.text=\n\ This\ is\ the\ accessor\ for\ the\ name\ feild.\n\ @return\ a\ string\ of\ the\ name.\n
+comment3.params=
+comment3.target=java.lang.String\ getDescription()
+comment3.text=\n\ This\ is\ the\ accessor\ for\ the\ description\ feild.\n\ @return\ a\ string\ of\ the\ description.\n
+comment4.params=newDescription
+comment4.target=void\ setDescription(java.lang.String)
+comment4.text=\n\ This\ is\ the\ mutator\ for\ the\ description.\n\ @param\ newDescription\ is\ the\ new\ description.\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\n\ This\ is\ a\ method\ for\ geting\ the\ info\ of\ an\ item\ as\ a\ string.\n\ @return\ a\ sting\ of\ the\ item\ information.\n
+numComments=6

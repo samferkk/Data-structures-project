@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=CommandEnum
+comment0.text=\n\ This\ is\ an\ enum\ class\ that\ will\ store\ the\ different\ commands\ that\ will\ be\ used\ in\ the\ game.\n\n\ @author\ William\ Jacob\ Reilley\n\ @version\ 2018\n
+comment1.params=nameValue
+comment1.target=CommandEnum(java.lang.String)
+comment1.text=\n\ This\ is\ the\ constructor\ for\ the\ enums.\n\ @param\ nameValue\ is\ a\ string\ for\ the\ name\ of\ the\ Command.\n
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment2.text=\n\ This\ is\ an\ accessor\ for\ the\ name\ of\ the\ enum.\n\ \n\ @return\ a\ streing\ of\ the\ name.\n
+numComments=3

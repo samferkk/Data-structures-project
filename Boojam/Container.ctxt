@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Container
+comment0.text=\n\ A\ class\ for\ defining\ containers\ that\ will\ contain\ items.\n\n\ @author\ William\ Jacob\ Reilley\n\ @version\ 26.04.2018\n
+comment1.params=nameJawn\ descriptionJawn\ pointJawns\ weightJawn
+comment1.target=Container(java.lang.String,\ java.lang.String,\ int,\ double)
+comment1.text=\n\ This\ is\ the\ construsctor\ for\ the\ conatiner.\n\ \n\ @param\ nameJawn\ is\ the\ name\ of\ the\ item.\n\ @param\ descriptionJawn\ is\ the\ description\ of\ the\ item.\n\ @param\ pointJawns\ is\ the\ point\ value\ of\ the\ item.\n\ @param\ weightJawn\ is\ the\ weight\ of\ the\ item.\n
+comment2.params=
+comment2.target=double\ getWeight()
+comment2.text=\n\ This\ method\ will\ get\ the\ weight\ of\ the\ container\ and\ its\ contents.\n\ @return\ a\ double\ of\ teh\ total\ weight.\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\n\ This\ method\ is\ the\ toString\ method\ for\ container.\n\ @return\ a\ string\ of\ the\ containers\ contents.\n
+comment4.params=item
+comment4.target=void\ addItem(Item)
+comment4.text=\ \n\ This\ method\ will\ be\ use\ to\ add\ items\ to\ the\ container.\n\ @param\ item\ is\ the\ beign\ added.\n
+comment5.params=itemName
+comment5.target=boolean\ hasItem(java.lang.String)
+comment5.text=\n\ This\ method\ will\ check\ to\ see\ if\ the\ container\ has\ an\ item.\n\ @param\ itemName\ is\ the\ item\ to\ be\ checked.\n\ @return\ a\ boolean\ of\ if\ the\ item\ is\ contained\ or\ not.\n
+comment6.params=name
+comment6.target=Item\ removeItem(java.lang.String)
+comment6.text=\n\ This\ is\ the\ method\ for\ removing\ items\ from\ the\ container.\n\ @param\ name\ is\ the\ name\ of\ the\ desired\ item.\n\ @return\ the\ item\ that\ was\ desried.\n
+numComments=7

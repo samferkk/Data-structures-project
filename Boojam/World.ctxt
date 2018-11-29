@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=World
+comment0.text=\n\ This\ class\ represents\ the\ entire\ world\ that\ makes\ up\ the\ "Campus\ of\ Kings"\n\ application.\ "Campus\ of\ Kings"\ is\ a\ very\ simple,\ text\ based\ adventure\ game.\n\ Users\ can\ walk\ around\ some\ scenery.\ That's\ all.\ It\ should\ really\ be\ extended\n\ to\ make\ it\ more\ interesting\!\n\ \n\ This\ world\ class\ creates\ the\ world\ where\ the\ game\ takes\ place.\n\ \n\ @author\ Maria\ Jump\n\ @version\ 2015.02.01\n
+comment1.params=
+comment1.target=World()
+comment1.text=\n\ Constructor\ for\ the\ world.\n
+comment2.params=name
+comment2.target=Room\ getRoom(java.lang.String)
+comment2.text=\n\ This\ method\ takes\ care\ of\ creating\ all\ of\ the\ aspects\ of\ the\ world\ for\n\ the\ "Campus\ of\ Kings"\ application.\n\ \n\ @param\ name\n\ \ \ \ \ \ \ \ \ \ \ \ The\ provided\ name\ of\ the\ room.\n\ @return\ The\ room\ associated\ with\ the\ provided\ name\n
+comment3.params=theRoom
+comment3.target=void\ addRoom(Room)
+comment3.text=\n\ Helper\ method\ for\ recreating\ a\ Room.\ Ensure\ that\ the\ room\ is\ created\ and\n\ installed\ in\ to\ the\ collection\ of\ Rooms\n\ \n\ @param\ theRoom\n\ \ \ \ \ \ \ \ \ \ \ \ The\ room\ to\ add\ to\ the\ world.\n
+comment4.params=from\ direction\ theRoom
+comment4.target=void\ createDoor(Room,\ java.lang.String,\ Room)
+comment4.text=\n\ Helper\ method\ for\ creating\ doors\ between\ rooms.\n\ \n\ @param\ from\n\ \ \ \ \ \ \ \ \ \ \ \ The\ room\ where\ the\ door\ originates.\n\ @param\ direction\n\ \ \ \ \ \ \ \ \ \ \ \ The\ direction\ of\ the\ exit.\n\ @param\ theRoom\n\ \ \ \ \ \ \ \ \ \ \ \ The\ room\ to\ the\ north\ of\ the\ originating\ room.\n
+comment5.params=
+comment5.target=void\ createRooms()
+comment5.text=\n\ This\ method\ creates\ all\ of\ the\ individual\ places\ in\ this\ world\ and\ all\n\ the\ doors\ connecting\ them.\n
+comment6.params=
+comment6.target=void\ createItems()
+comment6.text=\n\ This\ method\ is\ responsible\ for\ greating\ the\ items\ in\ the\ world.\n
+numComments=7

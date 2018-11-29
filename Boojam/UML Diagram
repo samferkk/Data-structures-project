@@ -1,0 +1,126 @@
+Main
+-main
+-actionPerformed
+-read (int)
+-isInstanceOf
+-setRequestFocusController
+-getWindows
+-updateChildFocusableWindowState
+-getOwnerlessWindows
+-getAllWindows
+-getAllUnblockedWundows
+-getFrames
+-setDefaultLookAndFeelDecorated
+-isDefaultLookAndFeelDecorated
+
+Item
+-Item
+-getName (String)
+-getDescription (String)
+getPoints (int)
+getWeight (double)
+toString (String)
+
+Game
+-Game
+-play
+-processCommand (boolean)
+-goBack
+-drop
+-examine
+-printGoodbye
+-goRoom
+-inventory
+-help
+-printLocationInformation
+-lock
+-look
+-pack
+-quit (boolean)
+-getScore
+-getStatus
+-take
+-getTurns
+-unlock
+-unpack
+-printWelcome
+Reader
+-Command
+-getResponse (String)
+- getResponseKeepCase(String)
+World
+-World
+-getRoom (Room)
+-addRoom 
+-createDoor
+-createRooms
+-createItems
+Player
+-Player
+-getCurrentPlayerRoom(Room)
+-getPreviousPlayerRoom(Room)
+-setCurrentPlayerRoom
+-addItem (Boolean)
+-getInventory (String)
+-getItem (item)
+-removeItem (Item)
+-getRemainingWeight (Double)
+
+Door
+-Door
+-getDestination (Room)
+-isLocked (Boolean)
+-setLocked
+-getKey(String)
+-setKey
+
+Room
+-Room
+getPoints (int)
+getName (String)
+getDescription (String)
+getCounter (Int)
+getExit (Door)
+setPoints
+setExit
+toString (String)
+addItem
+getItem (item)
+removeItem (Item)
+
+
+Container
+-Container
+-getWeight (double)
+-toString (String)
+-addItem
+-hasItem (boolean)
+-removeItem (item)
+
+CommandEnum
+-CommandEnum
+-getName (String)
+
+Writer
+-setTextArea
+-printInput
+-printLn
+-print
+-SstandardPrint
+-PrintWithAttributes
+-restartLog
+-copyDefaultLog
+
+CommandWords
+-isCommand (Boolean)
+-getCommandString (String)
+-getCommand (commandEnum)
+-Command
+-Command
+-Command
+-getCommandWord (CommandEnum)
+-isUnknown (Boolean)
+-hasSecondWOrd(Boolean)
+-hasWord(Boolean)
+-getWord(string)
+-getRestOfLine(String)

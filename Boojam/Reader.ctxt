@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Reader
+comment0.text=\n\ This\ class\ is\ part\ of\ the\ "Campus\ of\ Kings"\ application.\ "Campus\ of\ Kings"\ is\ a\n\ very\ simple,\ text\ based\ adventure\ game.\n\ \n\ This\ parser\ reads\ user\ input\ and\ tries\ to\ interpret\ it\ as\ an\ "Adventure"\n\ command.\ Every\ time\ it\ is\ called\ it\ reads\ a\ line\ from\ the\ terminal\ and\ tries\n\ to\ interpret\ the\ line\ as\ a\ two\ word\ command.\ It\ returns\ the\ command\ as\ an\n\ object\ of\ class\ Command.\n\ \n\ The\ parser\ has\ a\ set\ of\ known\ command\ words.\ It\ checks\ user\ input\ against\ the\n\ known\ commands,\ and\ if\ the\ input\ is\ not\ one\ of\ the\ known\ commands,\ it\ returns\n\ a\ command\ object\ that\ is\ marked\ as\ an\ unknown\ command.\n\ \n\ @author\ Maria\ Jump\n\ @version\ 2017.12.18\n
+comment1.params=
+comment1.target=Command\ getCommand()
+comment1.text=\n\ Returns\ the\ next\ command\ from\ the\ user.\n\ @return\ The\ next\ command\ from\ the\ user.\n
+comment2.params=
+comment2.target=java.lang.String\ getResponse()
+comment2.text=\n\ Return\ the\ response\ to\ a\ question\ in\ all\ lower\ case.\n\n\ @return\ The\ response\ typed\ in\ by\ the\ user.\n
+comment3.params=
+comment3.target=java.lang.String\ getResponseKeepCase()
+comment3.text=\n\ Return\ the\ response\ to\ a\ question\ in\ the\ case\ used\ by\ the\ player.\n\n\ @return\ The\ response\ typed\ in\ by\ the\ user.\n
+numComments=4

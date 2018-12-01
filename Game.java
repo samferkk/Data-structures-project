@@ -28,9 +28,29 @@ public class Game {
     public Game() {
         world = new World();
         // set the starting room
-        currentPlayer = new Player(world.getRoom("Tutorial Room 001"));
+        currentPlayer = new Player(world.getRoom("Lobby"));
         score = 0;
         turns = 0;
+        this.fillShoppingList();
+
+    }
+
+    /**
+     * This method will be used to add items to the shopping list of the player.
+     */
+    private void fillShoppingList() {
+        currentPlayer.addListItem("Cat in The Hat");
+        currentPlayer.addListItem("Soap");
+        currentPlayer.addListItem("Tennis ball");
+        currentPlayer.addListItem("Box of chocolate");
+        currentPlayer.addListItem("Wool Socks");
+        currentPlayer.addListItem("Basketball");
+        currentPlayer.addListItem("Spider-man action figure");
+        currentPlayer.addListItem("Brown jacket");
+        currentPlayer.addListItem("Lamp");
+        currentPlayer.addListItem("Hand Saw");
+        currentPlayer.addListItem("Hammer");
+        currentPlayer.addListItem("Pet Cemetary");
     }
 
     /**
@@ -73,17 +93,17 @@ public class Game {
                 case BACK:
                 goBack();
                 break;
-                
-                case BUY:
-                //buy(command);
-                break;
-                
+
                 case CROSS:
-                //croos(command);
+                cross();
                 break;
-                
+
+                case DROP:
+                drop(command);
+                break;
+
                 case READ:
-                //read(command);
+                read();
                 break;
 
                 case GO:
@@ -97,9 +117,9 @@ public class Game {
                 case INVENTORY:
                 inventory();
                 break;
-                
+
                 case LEAVE:
-                //leave();
+                wantToQuit = leave(command);
                 break;
 
                 case LOOK:
@@ -128,10 +148,6 @@ public class Game {
     // It helps if you organize these in alphabetical order.
 
     /**
-     * Method for handling the back command.
-     */
-
-    /**
      * This is the method for handling the back command.
      */
     private void goBack() {
@@ -142,6 +158,46 @@ public class Game {
             currentPlayer.setCurrentPlayerRoom(currentPlayer.getPreviousPlayerRoom());
             look();
         }
+    }
+
+    /**
+     * This method willl handle reading the shopping list.
+     */
+    private void read() {
+        Writer.println("Your current item to get is:");
+        Writer.println(currentPlayer.readList());
+    }
+    
+    /**
+     * This method will Cross off the top entry as long as the item in is the player inventory.
+     */
+    private void cross() {
+        String testItem = currentPlayer.readList();
+        if(currentPlayer.hasItem(testItem)){
+            Writer.println("Crossing off " + testItem + " from list");
+            currentPlayer.removeListItem();
+        }
+        else{
+            Writer.println("You do not have " + testItem + " in your inventory.");
+            Writer.println("Cannot cross off item");
+        }
+    }
+    
+    /**
+     * This method will have player leave the mall.
+     * It will check that the shopping list is empty.
+     * @param a command to be passed to the quit method.
+     * @return a boolean of wheater the player is quitting or not.
+     */
+    private boolean leave(Command command) {
+        boolean wantToQuit = false;
+        if(currentPlayer.isListEmpty() != false) {
+            wantToQuit = quit(command);
+        }
+        else{
+            Writer.println("You can not leave you have not gotten everything yet.");
+        }
+        return wantToQuit;
     }
 
     /**
@@ -161,32 +217,6 @@ public class Game {
             else {
                 currentPlayer.getCurrentPlayerRoom().addItem(currentPlayer.removeItem(testItem.getName()));
                 Writer.println("You dropped the item");
-            }
-        }
-    }
-
-    /**
-     * This mehtod will handle examining items.
-     * @param command is the command being issued.
-     */
-    private void examine(Command command) {
-        if (!command.hasSecondWord()) {
-            Writer.println("Which Item?");
-        }
-        else {
-            String item = command.getRestOfLine();
-            Item playerItem = currentPlayer.getItem(item);
-            if (playerItem == null) {
-                Item roomItem = currentPlayer.getCurrentPlayerRoom().getItem(item);
-                if (roomItem == null) {
-                    Writer.println("No such Item");
-                }
-                else{
-                    Writer.println(roomItem.toString());
-                }
-            }
-            else {
-                Writer.println(playerItem.toString());
             }
         }
     }
@@ -265,121 +295,10 @@ public class Game {
     }
 
     /**
-     * This method will be used to lock things.
-     * @param command is the commadn beign processed.
-     */
-    private void lock(Command command) {
-        if (!command.hasSecondWord()) {
-            Writer.println("Lock what?");
-        }
-        else {
-            String lockDirection = command.getRestOfLine();
-            Door lockingDoor = currentPlayer.getCurrentPlayerRoom().getExit(lockDirection);
-            if (lockingDoor == null) {
-                Writer.println("No door");
-            }
-            else {
-                if(lockingDoor.isLocked()) {
-                    Writer.println("Door is already locked");
-                }
-                else if (lockingDoor.getKey() == null){
-                    Writer.println("Door can not be locked");
-                }
-                else {
-                    Writer.println("Which key?");
-                    String lockingKey = Reader.getResponse();
-                    Item playerKey = currentPlayer.getItem(lockingKey);
-                    if (playerKey == null) {
-                        Writer.println("You dont have the key.");
-                    }
-                    else {
-                        if (!lockingKey.equals(lockingDoor.getKey())) {
-                            Writer.println("Wrong Key");
-                        }
-                        else {
-                            lockingDoor.setLocked(true);
-                            Writer.println("You locked it");
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    /**
      * Prints out the location information.
      */
     private void look(){
         this.printLocationInformation();
-    }
-
-    /**
-     * THis method will pack items into containers.
-     * @param command is the command being processed.
-     */
-    private void pack(Command command) {
-        if (!command.hasSecondWord()) {
-            Writer.println("Pack what?");
-        }
-        else {
-            String packingItemName = command.getRestOfLine();
-            Item playerItem = currentPlayer.getItem(packingItemName);
-            Item roomItem = currentPlayer.getCurrentPlayerRoom().getItem(packingItemName);
-            if (playerItem == null && roomItem == null) {
-                Writer.println("You don't have it");
-            }
-            else {
-                Item theItem = null;
-                if (playerItem == null) {
-                    theItem = roomItem;
-                }
-                else {
-                    theItem = playerItem;
-                }
-                if (theItem.getWeight() > currentPlayer.MAXIMUM_WEIGHT) {
-                    Writer.println("Item is too heavy.");
-                }
-                else {
-                    Writer.println("Which container?");
-                    String containerName = Reader.getResponse();
-                    Item playerContainer = currentPlayer.getItem(containerName);
-                    Item roomContainer = currentPlayer.getCurrentPlayerRoom().getItem(containerName);
-                    Container theContainer = null;
-                    if (playerContainer == null) {
-                        if(roomContainer instanceof Container) {
-                            theContainer = (Container)roomContainer;
-                        }
-                        else {
-                            Writer.print("That's not a container!");
-                        }
-                    }
-                    else {
-                        if (playerContainer instanceof Container) {
-                            theContainer = (Container)playerContainer;
-                        }
-                        else {
-                            Writer.println("That's not a container!");
-                        }
-                    }
-                    if (theContainer != null) {
-                        double remainingWeight = currentPlayer.getRemainingWeight();
-                        if (theItem.getWeight() > remainingWeight) {
-                            Writer.println("You are carrying too much already.");
-                        }
-                        else {
-                            theContainer.addItem(theItem);
-                            if (roomItem == null) {
-                                 currentPlayer.removeItem(theItem.getName());
-                            }
-                            else {
-                                currentPlayer.getCurrentPlayerRoom().removeItem(theItem.getName());
-                            }
-                            Writer.println("You packed it");
-                        }
-                    }
-                }
-            }
-        }
     }
 
     /**
@@ -397,23 +316,6 @@ public class Game {
             wantToQuit = false;
         }
         return wantToQuit;
-    }
-
-    /**
-     * Prints out the current score of the player.
-     */
-    private void getScore() {
-        Writer.println("Current Score: " + score);
-    }
-
-    /**
-     * This is the mehtod for handling the Status Command.
-     * This will print out the players current turns,then score, then location.
-     */
-    private void getStatus() {
-        getTurns();
-        getScore();
-        look();
     }
 
     /**
@@ -446,103 +348,7 @@ public class Game {
                 }
             }
         }
-    }
-
-    /**
-     * Print out the curetn number of turns the player has taken.
-     */
-    private void getTurns() {
-        Writer.println("Current Turns: " + turns);
-    }
-
-    /**
-     * This is the mehtod for unlocking doors.
-     * @param command is the command to process.
-     */
-    private void unlock(Command command) {
-        if (!command.hasSecondWord()) {
-            Writer.println("Unlock what?");
-        }
-        else {
-            String unlockDirection = command.getRestOfLine();
-            Door unlockingDoor = currentPlayer.getCurrentPlayerRoom().getExit(unlockDirection);
-            if (unlockingDoor == null) {
-                Writer.println("There is no door");
-            }
-            else {
-                if(!unlockingDoor.isLocked()) {
-                    Writer.println("Door is not locked");
-                }
-                else {
-                    Writer.println("Which key?");
-                    String unlockingKey = Reader.getResponse();
-                    Item playerKey = currentPlayer.getItem(unlockingKey);
-                    if (playerKey == null) {
-                        Writer.println("You dont have the key.");
-                    }
-                    else {
-                        if (!unlockingKey.equals(unlockingDoor.getKey())) {
-                            Writer.println("Wrong Key");
-                        }
-                        else {
-                            unlockingDoor.setLocked(false);
-                            Writer.println("You unlocked it");
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * This is the method for unpacking items from containers.
-     * @param command is the commmand being procesed.
-     */
-    private void unpack(Command command) {
-        if (!command.hasSecondWord()) {
-            Writer.println("Unpack what?");
-        }
-        else {
-            String unpackingContainerName = command.getRestOfLine();
-            Item roomContainer = currentPlayer.getCurrentPlayerRoom().getItem(unpackingContainerName);
-            Item playerContainer = currentPlayer.getItem(unpackingContainerName);
-            if (playerContainer == null && roomContainer == null) {
-                Writer.println("You dont see it");
-            }
-            else {
-                Container theContainer = null;
-                if (roomContainer == null) {
-                    if (playerContainer instanceof Container) {
-                        theContainer = (Container)playerContainer;
-                    }
-                }
-                else{
-                    if (roomContainer instanceof Container) {
-                        theContainer = (Container)roomContainer;
-                    }
-                }
-                if (theContainer == null) {
-                    Writer.println("That's not a container");
-                }
-                else {
-                    Writer.println("What item would you like to unpack?");
-                    String desiredItemName = Reader.getResponse();
-                    if (!theContainer.hasItem(desiredItemName)) {
-                        Writer.println("You don't find it");
-                    }
-                    else {
-                        Item testItem = theContainer.removeItem(desiredItemName);
-                        if (!currentPlayer.addItem(testItem)) {
-                            Writer.println("You are already carrying too much.");
-                        }
-                        else {
-                            Writer.println("You unpacked it");
-                        }
-                    }
-                }
-            }
-        }
-    }
+    } 
 
     /**
      * Print out the opening message for the player.

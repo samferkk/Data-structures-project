@@ -11,13 +11,13 @@ public enum CommandEnum {
      */
     BACK("back"),
     /**
-     * Buy command.
-     */
-    BUY("buy"),
-    /**
      * Cross off command.
      */
     CROSS("cross"),
+    /**
+     * This is the drop command.
+     */
+    DROP("drop"),
     /**
      * Read command.
      */

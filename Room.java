@@ -163,7 +163,7 @@ public class Room {
         boolean found = false;
         while (iter.hasNext() && !found) {
             Item testItem = iter.next();
-            if (itemName.equals(testItem.getName())) {
+            if (itemName.equalsIgnoreCase(testItem.getName())) {
                 found = true;
                 desiredItem = testItem;
             }

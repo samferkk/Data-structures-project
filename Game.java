@@ -167,7 +167,7 @@ public class Game {
         Writer.println("Your current item to get is:");
         Writer.println(currentPlayer.readList());
     }
-    
+
     /**
      * This method will Cross off the top entry as long as the item in is the player inventory.
      */
@@ -182,7 +182,7 @@ public class Game {
             Writer.println("Cannot cross off item");
         }
     }
-    
+
     /**
      * This method will have player leave the mall.
      * It will check that the shopping list is empty.
@@ -243,20 +243,19 @@ public class Game {
             Writer.println("Go where?");
         } else {
             String direction = command.getRestOfLine();
-
             // Try to leave current.
             Door doorway = null;
             if (!direction.equals("")) {
                 doorway = currentRoom.getExit(direction);
             }
-
             if (doorway == null) {
                 Writer.println("There is no door!");
             } else {
                 if(doorway.isLocked()) {
                     Writer.println("Door is locked");
-                }
-                else {
+                }else if(doorway.getDestination().getName().equals("Women's Room")){
+                    throw new IllegalArgumentException("You can't go into the women's room! The police came and arrested you.");
+                }else {
                     Room newRoom = doorway.getDestination();
                     currentPlayer.setCurrentPlayerRoom(newRoom);
                     score += currentPlayer.getCurrentPlayerRoom().getPoints();

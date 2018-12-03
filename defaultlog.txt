@@ -8,23 +8,39 @@ The Lobby of the mall.
 
 Exits: southwest east northwest west northeast southeast 
 
-> inventory
+> help
+You are lost. You are alone. You wander
+around at the university.
+
+Your command words are:
+drop help take read leave cross go back quit inventory look 
+> read
+Your current item to get is:
+Pet Cemetary
+> go northeast
+Noble Barns: 
+A barnyard style bookstore.
+Green Eggs & Ham, Cat in the Hat, Pet Cemetary, Milkweed, IT, 
+Exits: southwest 
+
+> go southwest
+Lobby: 
+The Lobby of the mall.
+
+Exits: southwest east northwest west northeast southeast 
 
 > go northeast
 Noble Barns: 
 A barnyard style bookstore.
-IT, Cat in the Hat, Milkweed, Pet Cemetary, Green Eggs & Ham, 
+Green Eggs & Ham, Cat in the Hat, Pet Cemetary, Milkweed, IT, 
 Exits: southwest 
 
-> take it
-You took the item.
-> inventory
-IT 
 > take pet cemetary
 You took the item.
-> cross
-Crossing off Pet Cemetary from list
-> quit
-You have earned 0 points in 7 turns.
-I hope you weren't too bored here on the Campus of Kings!
-Thank you for playing.  Good bye.
+> remove pet cemetary
+I don't know what you mean...
+> drop pet cemetary
+You dropped the item
+> drop books
+You do not have this item.
+> 

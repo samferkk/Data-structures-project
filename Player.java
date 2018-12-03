@@ -66,9 +66,13 @@ public class Player {
      */
     public boolean addItem(Item newItem) {
         boolean result = false;
-        playerItems.add(newItem);
-        result = true;
-
+        try {
+            playerItems.add(newItem);
+            result = true;
+        }  catch (NullPointerException e){
+            Writer.println("That item doesn't exist");
+            result = false;
+        }
         return result;
     }
 
@@ -133,7 +137,11 @@ public class Player {
      */
     public Item removeItem(String removingItem) {
         Item removedItem = this.getItem(removingItem);
-        playerItems.remove(removedItem);
+        try {
+            playerItems.remove(removedItem);
+        } catch (NullPointerException e){
+            Writer.println("That item does not exist.");
+        }
         return removedItem;
     }
 

@@ -42,6 +42,11 @@ Brain:
   - Code the three Exceptions.
   - Clean up look of game so everything reads right.
 
-Explanation Sheet:
+Explanation Sheet: There is a couple thigns that were done specifically to cover different requirements from data structures. Like the
+Christmas list displays only one item at a time because it is contained as a stack, but it adds an element of mystery to the game as the
+user doesnt know what the next item is or how many itmes there are. The Inventory was changed to a bag to implement the bag how ever it
+seemed fitting that when running around the mall the player would have a bag of stuff. The exception where creasted to add commedy to
+the game as we wanted there to be certain actions that the user took that had more of a consequence than simplingly ending the game, 
+rather have the entire thing crash.
 
-Conclusion:
+Conclusion: So this project was an interesting one. There was some didficulty in the looseness of the requirements but yet it was still enjoyable. Some of the issues faced where trying make code line up when converting the previously existing game code with new data structures. Over all time could have been worked out a touch better but everything seemed to run pretty smoothly over all. The buy mechanic did have to be scrapped however. All in all the game works well and the code functions without issues, so a success.

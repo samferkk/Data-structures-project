@@ -1,46 +1,169 @@
-
-Welcome to the Campus of Kings!
-Campus of Kings is a new, incredibly boring adventure game.
-Type 'help' if you need help.
-
+Welcome to Boojam's Wild Adventure!
+Boojam was sent out to get christmas gift and gets robbed. His parents dont believe him and kick him out of the house. So now Boojam must track down the person who robbed him and reclaim all the stolen items in order to regain his parent's trust..
+Wander around the mall collecting the gifts and crossing them off your list.
+Your command words are:
+drop help take read leave cross go back quit inventory look 
 Lobby: 
 The Lobby of the mall.
 
 Exits: southwest east northwest west northeast southeast 
 
-> help
-You are lost. You are alone. You wander
-around at the university.
-
-Your command words are:
-drop help take read leave cross go back quit inventory look 
 > read
 Your current item to get is:
 Pet Cemetary
 > go northeast
 Noble Barns: 
 A barnyard style bookstore.
-Green Eggs & Ham, Cat in the Hat, Pet Cemetary, Milkweed, IT, 
+Pet Cemetary, Cat in the Hat, Milkweed, IT, Green Eggs & Ham, 
 Exits: southwest 
 
+> take pet cemetarty
+No such Item.
+> take pet cemetary
+You took the item.
+> cross pet cemetary
+Crossing off Pet Cemetary from list
 > go southwest
 Lobby: 
 The Lobby of the mall.
 
 Exits: southwest east northwest west northeast southeast 
 
-> go northeast
-Noble Barns: 
-A barnyard style bookstore.
-Green Eggs & Ham, Cat in the Hat, Pet Cemetary, Milkweed, IT, 
-Exits: southwest 
+> read
+Your current item to get is:
+Hammer
+> go west
+West Wing: 
+The west wing of the mall.
 
-> take pet cemetary
-You took the item.
-> remove pet cemetary
+Exits: east south north west 
+
+> gi west
 I don't know what you mean...
-> drop pet cemetary
-You dropped the item
-> drop books
-You do not have this item.
+> go west
+Lowes Depot: 
+A hardware supplies store
+Table Saw, Hammer, Electric Drill, Hand Saw, 
+Exits: east 
+
+> take hammer
+You took the item.
+> cross hammer
+Crossing off Hammer from list
+> read
+Your current item to get is:
+Hand Saw
+> take hand saw
+You took the item.
+> cross
+Crossing off Hand Saw from list
+> reasd
+I don't know what you mean...
+> read
+Your current item to get is:
+Lamp
+> go west
+There is no door!
+> go east
+West Wing: 
+The west wing of the mall.
+
+Exits: east south north west 
+
+> go east
+Lobby: 
+The Lobby of the mall.
+
+Exits: southwest east northwest west northeast southeast 
+
+> go southwest
+Trader Bill's: 
+America's favorite random item store.
+Candle, Soap, Wool Socks, Rabbits Foot, 
+Exits: northeast 
+
+> go northeast
+Lobby: 
+The Lobby of the mall.
+
+Exits: southwest east northwest west northeast southeast 
+
+> go west
+West Wing: 
+The west wing of the mall.
+
+Exits: east south north west 
+
+> go north
+Ikeya: 
+A furniture shop. Known for easy assembly.
+Love Seat, Fireplace, Futon, Lamp, 
+Exits: south 
+
+> 'take lamp
+I don't know what you mean...
+> take lamp
+You took the item.
+> cross lamp
+Crossing off Lamp from list
+> read
+Your current item to get is:
+Brown jacket
+> go south
+West Wing: 
+The west wing of the mall.
+
+Exits: east south north west 
+
+> gi east
+I don't know what you mean...
+> go east
+Lobby: 
+The Lobby of the mall.
+
+Exits: southwest east northwest west northeast southeast 
+
+> go southwest
+Trader Bill's: 
+America's favorite random item store.
+Candle, Soap, Wool Socks, Rabbits Foot, 
+Exits: northeast 
+
+> go north
+There is no door!
+> go norhh
+There is no door!
+> go north
+There is no door!
+> go northeast
+Lobby: 
+The Lobby of the mall.
+
+Exits: southwest east northwest west northeast southeast 
+
+> go southwest
+Trader Bill's: 
+America's favorite random item store.
+Candle, Soap, Wool Socks, Rabbits Foot, 
+Exits: northeast 
+
+> go northeast
+Lobby: 
+The Lobby of the mall.
+
+Exits: southwest east northwest west northeast southeast 
+
+> go southeast
+Sweat Shop: 
+The #1 gym in the country.
+Brown Jacket, Green Jacket, Red Sweatpants, Brown Sweater, 
+Exits: northwest 
+
+> take brown jacket
+You took the item.
+> cross brown jacket
+Crossing off Brown jacket from list
+> read
+Your current item to get is:
+Spider-man action figure
 > 

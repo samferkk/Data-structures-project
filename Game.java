@@ -225,7 +225,7 @@ public class Game {
      * Print out the closing message for the player.
      */
     private void printGoodbye() {
-        Writer.println("I hope you weren't too bored here on the Campus of Kings!");
+        Writer.println("I hope you enjoyed Boojam's Wild Adventure!");
         Writer.println("Thank you for playing.  Good bye.");
     }
 
@@ -278,9 +278,7 @@ public class Game {
      * message and a list of the command words.
      */
     private void help() {
-        Writer.println("You are lost. You are alone. You wander");
-        Writer.println("around at the university.");
-        Writer.println();
+        Writer.println("Wander around the mall collecting the gifts and crossing them off your list.");
         Writer.println("Your command words are:");
         Writer.println(CommandWords.getCommandString());
     }
@@ -354,11 +352,11 @@ public class Game {
      */
     private void printWelcome() {
         Room currentRoom = currentPlayer.getCurrentPlayerRoom();
-        Writer.println();
-        Writer.println("Welcome to the Campus of Kings!");
-        Writer.println("Campus of Kings is a new, incredibly boring adventure game.");
-        Writer.println("Type 'help' if you need help.");
-        Writer.println();
+        Writer.println("Welcome to Boojam's Wild Adventure!");
+        Writer.println("Boojam was sent out to get christmas gift and gets robbed. His parents dont believe him and kick him out of the house. So now Boojam must track down the person who robbed him and reclaim all the stolen items in order to regain his parent's trust..");
+        Writer.println("Wander around the mall collecting the gifts and crossing them off your list.");
+        Writer.println("Your command words are:");
+        Writer.println(CommandWords.getCommandString());
         printLocationInformation();
         Writer.println("");
     }

@@ -49,4 +49,7 @@ seemed fitting that when running around the mall the player would have a bag of 
 the game as we wanted there to be certain actions that the user took that had more of a consequence than simplingly ending the game, 
 rather have the entire thing crash.
 
-Conclusion: So this project was an interesting one. There was some didficulty in the looseness of the requirements but yet it was still enjoyable. Some of the issues faced where trying make code line up when converting the previously existing game code with new data structures. Over all time could have been worked out a touch better but everything seemed to run pretty smoothly over all. The buy mechanic did have to be scrapped however. All in all the game works well and the code functions without issues, so a success.
+Conclusion: So this project was an interesting one. There was some didficulty in the looseness of the requirements but yet it was still
+enjoyable. Some of the issues faced where trying make code line up when converting the previously existing game code with new data
+structures. Over all time could have been worked out a touch better but everything seemed to run pretty smoothly over all. The buy
+mechanic did have to be scrapped however. All in all the game works well and the code functions without issues, so a success.
